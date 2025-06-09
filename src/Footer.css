@@ -1,0 +1,11 @@
+.Footer {
+  width: 100%;
+  background: #444b5a;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-size: 1rem;
+  position: static; /* or 'fixed' if you want it always at the bottom */
+  bottom: 0;
+  left: 0;
+}
