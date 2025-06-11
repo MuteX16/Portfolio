@@ -4,8 +4,7 @@
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
+  justify-content: flex-start; /* Align items to the start */
   height: 64px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   position: static;
@@ -17,6 +16,18 @@
 .Header-logo {
   font-size: 1.3rem;
   font-weight: bold;
+  flex: 0 0 auto; /* Prevent logo from growing */
+}
+
+.Header-spacer {
+  flex: 0 0 120px; /* Adjust width to match your logo width */
+}
+
+.Header-nav {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center; /* Center nav horizontally */
+  align-items: center;
 }
 
 .Header-nav a {
@@ -52,14 +63,3 @@
   }
 }
 
-.Footer {
-  width: 100%;
-  background: #444b5a;
-  color: #fff;
-  text-align: center;
-  padding: 16px;
-  font-size: 1rem;
-  position: static; /* or 'fixed' if you want it always at the bottom */
-  bottom: 0;
-  left: 0;
-}

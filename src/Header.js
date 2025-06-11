@@ -10,6 +10,7 @@ function Header() {
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div className="Header-spacer"></div>
     </header>
   );
 }
