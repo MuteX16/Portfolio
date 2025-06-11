@@ -17,6 +17,7 @@
   font-size: 1.3rem;
   font-weight: bold;
   flex: 0 0 auto; /* Prevent logo from growing */
+  margin-left: 15px;
 }
 
 .Header-spacer {
