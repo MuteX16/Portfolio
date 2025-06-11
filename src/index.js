@@ -5,6 +5,9 @@ import ProfileSection from './ProfileSection';
 import Header from './Header';
 import Footer from './Footer';
 import AboutMe from './AboutMe';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contact from './Contact';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +16,9 @@ root.render(
     <Header />
     <ProfileSection />
     <AboutMe />
+    <Skills />
+    <Projects />
+    <Contact />
     {/* Add more sections as needed */}
     <Footer />
   </React.StrictMode>

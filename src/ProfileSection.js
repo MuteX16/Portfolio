@@ -31,7 +31,7 @@ function ProfileSection() {
       {showDialog && (
         <div className="easter-egg-dialog">
           <div className="easter-egg-content">
-            <p>Do you love me?</p>
+            <p>Am I handsome?</p>
             <button onClick={() => handleAnswer('Yes')}>Yes</button>
             <button onClick={() => handleAnswer('No')}>No</button>
           </div>

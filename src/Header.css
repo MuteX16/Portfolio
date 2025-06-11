@@ -7,7 +7,7 @@
   justify-content: flex-start; /* Align items to the start */
   height: 64px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  position: static;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
