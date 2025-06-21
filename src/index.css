@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #353945 0%, #444b5a 100%);
+  min-height: 100vh;
 }
 
 code {
@@ -14,4 +16,43 @@ code {
 
 html {
   scroll-behavior: smooth;
+}
+
+.section-card {
+  background: rgba(68, 75, 90, 0.92);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 32px 28px;
+  margin: 48px auto;
+  max-width: 900px;
+  width: 90%;
+  transition: box-shadow 0.2s;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+}
+
+.section-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 700px) {
+  .section-card {
+    padding: 18px 6vw;
+    margin: 32px 0;
+  }
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

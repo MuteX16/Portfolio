@@ -16,13 +16,13 @@
 
 .ProfileSection {
   display: flex;
-  flex-direction: column;   /* Stack children vertically */
-  align-items: center;      /* Center horizontally */
-  justify-content: center;  /* Center vertically (optional, for full height) */
-  background: #3a3f4b;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   width: 100%;
-  min-height: 100vh;
+  margin-top: 80px;
+  margin-bottom: 24px;
 }
 
 /* Add to ProfileSection.css */

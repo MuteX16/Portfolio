@@ -9,15 +9,17 @@
 }
 
 .Certificate-card {
-  background: #444b5a;
+  background: #52586a; /* Changed from #444b5a */
   color: #fff;
   border-radius: 8px;
   padding: 16px 20px;
   min-width: 260px;
+  width: 300px; /* Add this line */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-sizing: border-box;
 }
 
 .Certificate-card a {
@@ -28,4 +30,13 @@
 }
 .Certificate-card a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .Skills-list li,
+  .Project-card,
+  .Certificate-card {
+    width: 100%;
+    min-width: 0;
+  }
 }

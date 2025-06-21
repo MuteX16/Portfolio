@@ -1,9 +1,12 @@
 .AboutMe {
-  background: #353a47;
   color: #fff;
   padding: 32px 40px;
   margin-bottom: 24px;
   border-radius: 8px;
-  width: 100%;
+  /* width: 100%; */ /* Remove or comment out this line */
   box-sizing: border-box;
+}
+
+.AboutMe p {
+  text-align: justify;
 }

@@ -6,7 +6,7 @@
 }
 
 .Project-card {
-  background: #444b5a;
+  background: #52586a; /* Changed from #444b5a */
   color: #fff;
   border-radius: 8px;
   padding: 20px 24px;
@@ -15,18 +15,38 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-sizing: border-box;
+  min-height: 180px; /* Optional: set a reasonable minimum height */
 }
 
 .Project-card h3 {
   margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.Project-card p {
+  text-align: justify;
+  margin-bottom: 0;
+  width: 100%;
+  flex: 1 1 auto; /* This makes the description fill available space */
 }
 
 .Project-card a {
   color: #61dafb;
-  margin-top: 12px;
+  margin-top: 16px;
   text-decoration: none;
   font-weight: bold;
+  align-self: flex-start;
 }
+
 .Project-card a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .Project-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 120px;
+  }
 }

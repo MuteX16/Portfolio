@@ -1,8 +1,8 @@
 import './Contact.css';
 
-function Contact() {
+function Contact(props) {
   return (
-    <section className="Contact" id="contact">
+    <section className="Contact section-card" id="contact" {...props}>
       <h2>Contact</h2>
       <ul className="Contact-list">
         <li>

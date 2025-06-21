@@ -6,12 +6,14 @@ const skills = [
   { name: 'Python', icon: '🐍' },
   { name: 'C++', icon: '💻' },
   { name: 'Cybersecurity', icon: '🔒' },
+  { name: 'Django', icon: '🌿' }, // Added Django
+  { name: 'Logic Circuits', icon: '🔌' }, // Added Logic Circuits
   // Add more as needed
 ];
 
-function Skills() {
+function Skills(props) {
   return (
-    <section className="Skills" id="skills">
+    <section className="Skills section-card" id="skills" {...props}>
       <h2>My Skills</h2>
       <ul className="Skills-list">
         {skills.map(skill => (

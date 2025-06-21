@@ -8,7 +8,7 @@
 }
 
 .Skills-list li {
-  background: #444b5a;
+  background: #52586a; /* Changed from #444b5a to a lighter/different shade */
   color: #fff;
   border-radius: 8px;
   padding: 12px 20px;
@@ -16,9 +16,20 @@
   display: flex;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 300px; /* Add this line */
+  box-sizing: border-box;
 }
 
 .Skills-icon {
   margin-right: 10px;
   font-size: 1.4em;
+}
+
+@media (max-width: 700px) {
+  .Skills-list li,
+  .Project-card,
+  .Certificate-card {
+    width: 100%;
+    min-width: 0;
+  }
 }

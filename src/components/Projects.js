@@ -4,19 +4,19 @@ const projects = [
   {
     title: 'Portfolio Website',
     description: 'A personal website built with React showcasing my skills and projects.',
-    link: 'https://github.com/yourusername/portfolio',
+    link: 'https://github.com/MuteX16/Portfolio',
   },
   {
-    title: 'IoT Home Automation',
-    description: 'A smart home system using Raspberry Pi and sensors.',
+    title: 'Salon Inventory Management System',
+    description: 'A web-based application for tracking salon products, managing stock levels, and generating inventory reports.',
     link: 'https://github.com/yourusername/iot-home',
   },
   // Add more projects as needed
 ];
 
-function Projects() {
+function Projects(props) {
   return (
-    <section className="Projects" id="projects">
+    <section className="Projects section-card" id="projects" {...props}>
       <h2>My Projects</h2>
       <div className="Projects-list">
         {projects.map(project => (

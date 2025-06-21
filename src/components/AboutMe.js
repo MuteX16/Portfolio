@@ -1,8 +1,8 @@
 import './AboutMe.css';
 
-function AboutMe() {
+function AboutMe(props) {
   return (
-    <section className="AboutMe" id="about">
+    <section className="AboutMe section-card" id="about" {...props}>
       <h2>About Me</h2>
       <p>
 
