@@ -1,25 +1,23 @@
 .Certificates-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
 }
 
 .Certificate-card {
-  background: #52586a; /* Changed from #444b5a */
+  background: #52586a;
   color: #fff;
   border-radius: 8px;
   padding: 16px 20px;
-  min-width: 260px;
-  width: 300px; /* Add this line */
+  min-width: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  box-sizing: border-box;
 }
 
 .Certificate-card a {
@@ -32,11 +30,13 @@
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
-  .Skills-list li,
-  .Project-card,
-  .Certificate-card {
-    width: 100%;
-    min-width: 0;
+@media (max-width: 900px) {
+  .Certificates-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .Certificates-list {
+    grid-template-columns: 1fr;
   }
 }

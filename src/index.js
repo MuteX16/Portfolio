@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Certificates from './components/Certificates';
+import Achievements from './components/Achievements';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,7 @@ root.render(
     <AboutMe style={{ animationDelay: '0.4s' }} />
     <Skills style={{ animationDelay: '0.6s' }} />
     <Projects style={{ animationDelay: '0.8s' }} />
+    <Achievements style={{ animationDelay: '0.9s' }} />
     <Certificates style={{ animationDelay: '1.0s' }} />
     <Contact style={{ animationDelay: '1.2s' }} />
     <Footer />
