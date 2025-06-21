@@ -1,0 +1,18 @@
+.Contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.Contact-list li a {
+  color: #61dafb;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.Contact-list li a:hover {
+  color: #fff;
+}

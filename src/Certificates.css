@@ -1,32 +1,31 @@
-.Projects-list {
+.Certificates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 18px;
   justify-content: center;
 }
 
-.Project-card {
+.Certificate-card {
   background: #444b5a;
   color: #fff;
   border-radius: 8px;
-  padding: 20px 24px;
-  width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 16px 20px;
+  min-width: 260px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.Project-card h3 {
-  margin-top: 0;
-}
-
-.Project-card a {
+.Certificate-card a {
   color: #61dafb;
-  margin-top: 12px;
+  margin-top: 8px;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 0.95em;
 }
-.Project-card a:hover {
+.Certificate-card a:hover {
   text-decoration: underline;
 }

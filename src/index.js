@@ -8,6 +8,7 @@ import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
+import Certificates from './Certificates'; // Import the Certificates component
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
     <AboutMe />
     <Skills />
     <Projects />
+    <Certificates /> {/* Add this line */}
     <Contact />
     {/* Add more sections as needed */}
     <Footer />
