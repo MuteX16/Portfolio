@@ -8,22 +8,28 @@
 .Project-card {
   background: #52586a; /* Changed from #444b5a */
   color: #fff;
-  border-radius: 8px;
-  padding: 20px 24px;
-  width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border-radius: 12px;
+  padding: 18px 22px;
+  min-width: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-  min-height: 180px; /* Optional: set a reasonable minimum height */
+  align-items: stretch; /* <-- Change from flex-start to stretch */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  width: 100%;
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 18px;
 }
 
 .Project-card h3 {
   margin-top: 0;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: block; /* Ensures centering works */
 }
 
 .Project-card p {

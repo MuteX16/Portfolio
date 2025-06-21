@@ -8,6 +8,7 @@
   left: 0;
   box-sizing: border-box;
   padding: 16px 0; /* Adjusted padding for better spacing */
+  border-top: 2px solid #61dafb; /* Consistent divider */
 }
 
 /* Responsive: Match header's mobile padding */

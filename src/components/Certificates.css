@@ -11,18 +11,19 @@
 .Certificate-card {
   background: #52586a;
   color: #fff;
-  border-radius: 8px;
-  padding: 16px 20px;
+  border-radius: 12px;
+  padding: 18px 22px;
   min-width: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   width: 100%;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 18px;
 }
 
 .Certificate-card a {
@@ -41,6 +42,13 @@
 .Certificate-card span {
   text-align: justify;
   display: block;
+}
+
+.Certificate-card strong {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: block; /* Ensures centering works for <strong> */
 }
 
 .Certificate-divider {
