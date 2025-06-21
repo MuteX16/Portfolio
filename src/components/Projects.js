@@ -22,6 +22,7 @@ function Projects(props) {
         {projects.map(project => (
           <div className="Project-card" key={project.title}>
             <h3>{project.title}</h3>
+            <hr className="Project-divider" />
             <p>{project.description}</p>
             <a href={project.link} target="_blank" rel="noopener noreferrer">
               View on GitHub

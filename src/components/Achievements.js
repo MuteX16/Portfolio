@@ -5,7 +5,7 @@ const achievements = [
   {
     title: 'DECODE 2024 - University Capture the Flag Certificate of Participation',
     description: 'Participated in the DECODE 2024 Capture the Flag competition organized by Trend Micro.',
-    date: 'Auguest 2024',
+    date: 'August 2024',
     link: 'https://www.linkedin.com/in/mark-yabes-602026253/overlay/1750492196720/single-media-viewer/?profileId=ACoAAD55PeIBwjZbWdWa3lD3G-CqJ9DFd-X7078',
     category: 'Cybersecurity'
   },
@@ -166,6 +166,16 @@ const achievements = [
   // Add more achievements as needed
 ];
 
+// Helper to parse "Month YYYY" into a Date object
+function parseMonthYear(str) {
+  // Handles both "Month YYYY" and "Month DD, YYYY"
+  const date = new Date(str);
+  if (!isNaN(date)) return date;
+  // fallback for "Month YYYY"
+  const [month, year] = str.split(' ');
+  return new Date(`${month} 1, ${year}`);
+}
+
 function groupByCategory(items) {
   return items.reduce((acc, item) => {
     const cat = item.category || 'Other';
@@ -180,28 +190,57 @@ function Achievements(props) {
   const ROWS = 2;
   const INITIAL_COUNT = COLUMNS * ROWS;
 
-  const grouped = groupByCategory(achievements);
+  // Sort by date descending before grouping
+  const sortedAchievements = [...achievements].sort(
+    (a, b) => parseMonthYear(b.date) - parseMonthYear(a.date)
+  );
+  const grouped = groupByCategory(sortedAchievements);
+  const categories = Object.keys(grouped);
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [showAll, setShowAll] = useState({});
 
   const handleToggle = (cat) => {
     setShowAll((prev) => ({ ...prev, [cat]: !prev[cat] }));
   };
 
+  const categoriesToShow =
+    selectedCategory === 'All' ? categories : [selectedCategory];
+
   return (
     <section className="Achievements section-card" id="achievements" {...props}>
       <h2>Achievements</h2>
-      {Object.entries(grouped).map(([category, items]) => {
+      {/* Centered Navbar */}
+      <div className="Achievements-navbar">
+        <button
+          className={`category-btn${selectedCategory === 'All' ? ' active' : ''}`}
+          onClick={() => setSelectedCategory('All')}
+        >
+          All
+        </button>
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            className={`category-btn${selectedCategory === cat ? ' active' : ''}`}
+            onClick={() => setSelectedCategory(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+      {/* Category Sections */}
+      {categoriesToShow.map((category) => {
+        const items = grouped[category];
         const isAll = showAll[category];
         const visible = isAll ? items : items.slice(0, INITIAL_COUNT);
         return (
           <div key={category} style={{ marginBottom: '2em' }}>
-            <h3 style={{ margin: '1em 0 0.5em 0' }}>{category}</h3>
+            <h3 style={{ margin: '1em 0 0.5em 0', textAlign: 'center' }}>{category}</h3>
             <ul className="Achievements-list">
               {visible.map((ach, idx) => (
                 <li key={idx} className="Achievement-card">
                   <div>
-                    <strong>{ach.title}</strong>
-                    <br />
+                    <strong className="Achievement-title">{ach.title}</strong>
+                    <hr className="Achievement-divider" />
                     <span>{ach.description}</span>
                     <br />
                     <span style={{ fontSize: '0.95em', color: '#bbb' }}>{ach.date}</span>

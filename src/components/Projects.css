@@ -17,6 +17,8 @@
   align-items: flex-start;
   box-sizing: border-box;
   min-height: 180px; /* Optional: set a reasonable minimum height */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Project-card h3 {
@@ -26,9 +28,6 @@
 
 .Project-card p {
   text-align: justify;
-  margin-bottom: 0;
-  width: 100%;
-  flex: 1 1 auto; /* This makes the description fill available space */
 }
 
 .Project-card a {
@@ -43,10 +42,20 @@
   text-decoration: underline;
 }
 
+.Project-divider {
+  border: none;
+  border-top: 2px solid rgba(100, 220, 255, 0.5);
+  margin: 0.5em auto 1em auto;
+  width: 32px;
+  border-radius: 2px;
+  display: block;
+}
+
 @media (max-width: 700px) {
   .Project-card {
     width: 100%;
     min-width: 0;
+    max-width: 95vw;
     min-height: 120px;
   }
 }

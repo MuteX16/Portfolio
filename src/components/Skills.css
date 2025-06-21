@@ -8,7 +8,7 @@
 }
 
 .Skills-list li {
-  background: #52586a; /* Changed from #444b5a to a lighter/different shade */
+  background: #52586a;
   color: #fff;
   border-radius: 8px;
   padding: 12px 20px;
@@ -16,20 +16,16 @@
   display: flex;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  width: 300px; /* Add this line */
+  width: 300px;
   box-sizing: border-box;
-}
-
-.Skills-icon {
-  margin-right: 10px;
-  font-size: 1.4em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 700px) {
-  .Skills-list li,
-  .Project-card,
-  .Certificate-card {
+  .Skills-list li {
     width: 100%;
     min-width: 0;
+    max-width: 95vw;
   }
 }

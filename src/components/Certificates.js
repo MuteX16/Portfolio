@@ -19,30 +19,32 @@ const certificates = [
     date: 'October 2022',
     link: 'https://www.pirple.com/certificates/n7puzqwulq',
   },
-  {
-    title: 'Web Attack Investigator',
-    issuer: 'LetsDefend',
-    date: 'October 2024',
-    link: 'https://app.letsdefend.io/my-rewards/detail/5d15868a3b9a41018d1fdb846dd152b7',
-  },
-  {
-    title: 'DECODE 2024 - University Capture the Flag Certificate of Participation',
-    issuer: 'Trend Micro',
-    date: 'August 2024',
-    link: 'https://www.linkedin.com/in/mark-yabes-602026253/overlay/1750492196720/single-media-viewer/?profileId=ACoAAD55PeIBwjZbWdWa3lD3G-CqJ9DFd-X7078',
-  },
   // Add more certificates as needed
 ];
 
+// Helper to parse "Month YYYY" into a Date object
+function parseMonthYear(str) {
+  const date = new Date(str);
+  if (!isNaN(date)) return date;
+  const [month, year] = str.split(' ');
+  return new Date(`${month} 1, ${year}`);
+}
+
 function Certificates(props) {
+  // Sort by date descending
+  const sortedCertificates = [...certificates].sort(
+    (a, b) => parseMonthYear(b.date) - parseMonthYear(a.date)
+  );
+
   return (
     <section className="Certificates section-card" id="certificates" {...props}>
       <h2>Certificates</h2>
       <ul className="Certificates-list">
-        {certificates.map((cert, idx) => (
+        {sortedCertificates.map((cert, idx) => (
           <li key={idx} className="Certificate-card">
             <div>
-              <strong>{cert.title}</strong> <br />
+              <strong>{cert.title}</strong>
+              <hr className="Certificate-divider" />
               <span>{cert.issuer}</span> &middot; <span>{cert.date}</span>
             </div>
             {cert.link && (

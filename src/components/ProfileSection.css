@@ -7,11 +7,17 @@
   margin-bottom: 24px;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  max-width: 90vw;
+  max-height: 90vw;
 }
 
-.ProfilePicture:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+@media (max-width: 500px) {
+  .ProfilePicture {
+    width: 70vw;
+    height: 70vw;
+    max-width: 95vw;
+    max-height: 95vw;
+  }
 }
 
 .ProfileSection {
@@ -21,8 +27,15 @@
   justify-content: center;
   color: #fff;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 80px; /* Or adjust as needed for your header height */
   margin-bottom: 24px;
+}
+
+/* For mobile, increase margin-top to clear the taller header */
+@media (max-width: 700px) {
+  .ProfileSection {
+    margin-top: 140px; /* Or adjust as needed for mobile header height */
+  }
 }
 
 /* Add to ProfileSection.css */

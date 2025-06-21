@@ -4,6 +4,7 @@
   display: flex;
   gap: 24px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Contact-list li a {
@@ -15,4 +16,12 @@
 
 .Contact-list li a:hover {
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .Contact-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 }

@@ -3,10 +3,15 @@
   padding: 32px 40px;
   margin-bottom: 24px;
   border-radius: 8px;
-  /* width: 100%; */ /* Remove or comment out this line */
   box-sizing: border-box;
 }
 
 .AboutMe p {
   text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .AboutMe {
+    padding: 18px 8px;
+  }
 }
