@@ -31,9 +31,10 @@ function ProfileSection(props) {
         onClick={handleProfileClick}
         style={{ cursor: 'pointer' }}
       />
-      <h1>Mark John Wayne Alaras Yabes</h1>
-      <h2>Bachelor of Science in Computer Engineering</h2>
-      <h2>Technological Institute of the Philippines - Manila</h2>
+      <h1 className="ProfileName">Mark John Wayne Alaras Yabes</h1>
+      <p className="ProfileTagline">Aspiring Cybersecurity Specialist &amp; Backend Developer</p>
+      <h2 className="ProfileDegree">Bachelor of Science in Computer Engineering</h2>
+      <p className="ProfileSchool">Technological Institute of the Philippines - Manila</p>
 
       {showFact && (
         <div className="easter-egg-dialog">
