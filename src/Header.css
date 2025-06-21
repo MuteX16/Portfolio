@@ -79,7 +79,7 @@
     height: 64px;
     padding: 0 8px;
     align-items: center;
-    justify-content: center; /* Center all items horizontally */
+    justify-content: flex-start;
     position: fixed;
     width: 100vw;
   }
@@ -88,15 +88,19 @@
     margin-left: 0;
     margin-right: 10px;
     order: 0;
+    z-index: 102;
   }
   .Header-logo {
-    margin-left: 0;
-    margin-bottom: 0;
-    width: auto;
-    text-align: center;      /* Center text inside the logo */
-    order: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
     font-size: 1.1rem;
-    flex: 1 1 auto;          /* Allow logo to grow and center */
+    font-weight: bold;
+    width: fit-content;
+    z-index: 101;
+    pointer-events: auto;
   }
   .Header-nav {
     display: none;
