@@ -2,14 +2,19 @@ import './Projects.css';
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    description: 'A personal website built with React showcasing my skills and projects.',
-    link: 'https://github.com/MuteX16/Portfolio',
+    title: 'Counseling Scheduling Backend',
+    description: 'A Node.js backend API for a counseling appointment scheduling system with authentication, booking management, and notification features. Developed during my 2nd year of college as a project requirement for Database Management Systems course.',
+    link: 'https://github.com/Mark01-1104/Final_Project-Backend',
   },
   {
     title: 'Salon Inventory Management System',
-    description: 'A web-based application for tracking salon products, managing stock levels, and generating inventory reports.',
-    link: 'https://github.com/yourusername/iot-home',
+    description: 'A web-based application for tracking salon products, managing stock levels, and generating inventory reports. I handled the backend development as a partial requirement for our Software Design course during my third year of college.',
+    link: 'https://github.com/Mark01-1104/SALON-INVENTORY-AND-SORTING-SYSTEM',
+  },
+  {
+    title: '8-Bit Computer Project',
+    description: 'A collaborative project to build a functional 8-bit computer from scratch. I was responsible for designing and implementing the clock module and program counter components, working with my team to create a complete working system.',
+    link: 'https://drive.google.com/drive/folders/1BR08b-nV_GfJ4sgA9X7uYS3b3HbYvjiU',
   },
   // Add more projects as needed
 ];
@@ -25,7 +30,7 @@ function Projects(props) {
             <hr className="Project-divider" />
             <p>{project.description}</p>
             <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View on GitHub
+              View Project
             </a>
           </div>
         ))}
